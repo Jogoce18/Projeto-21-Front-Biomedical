@@ -9,7 +9,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import Briefings from './pages/Briefings/Briefings';
 import { createTheme, ThemeProvider } from '@mui/material';
 import Add from './pages/Add/Add';
-import Project from './pages/Project/Project';
+import Project from './pages/Maintenance/Maintenance';
 
 function App() {
   const theme = createTheme({

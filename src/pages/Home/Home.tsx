@@ -18,7 +18,7 @@ import { useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import useAlert from '../../hooks/useAlert';
 import dayjs from 'dayjs';
-
+import styled from 'styled-components';
 
 
 export default function Home() {
@@ -126,6 +126,7 @@ export default function Home() {
                     <AccordionDetails sx={{ bgcolor: '#5D5D5D', borderRadius: '0 0 5px 5px' }}>
                       <Typography>
                         {p.project.resume}
+                        <PostImage src={p.project.imageUrl} />
                       </Typography>
                     </AccordionDetails>
                   </Accordion>
@@ -186,3 +187,12 @@ const styles = {
     color: '#5d5d5d'
   }
 };
+export const PostImage = styled.img`
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 15px;
+	border: 1px solid var(#BF0000);
+  margin-left: 500px;
+`;

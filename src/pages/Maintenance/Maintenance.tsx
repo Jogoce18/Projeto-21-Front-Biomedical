@@ -15,6 +15,7 @@ import useAuth from '../../hooks/useAuth';
 import api, { ProjectClientData } from '../../services/api';
 import dayjs from 'dayjs';
 import PageButton from '../../components/ProjectPage/PageButton';
+import styled from 'styled-components';
 
 
 export default function Project() {
@@ -77,7 +78,7 @@ export default function Project() {
           <AddText >
             Image
           </AddText>
-        
+          <PostImage src={projectData.imageUrl} />
           <AddText >
             Informações importantes
           </AddText>
@@ -179,3 +180,11 @@ const styles = {
    
   }
 };
+export const PostImage = styled.img`
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 15px;
+	border: 1px solid var(#BF0000);
+`;
