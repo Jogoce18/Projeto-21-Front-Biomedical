@@ -49,7 +49,6 @@ export default function SignUp() {
       setFormData({ ...formData, confirmPassword: '' });
       return;
     }
-
     setIsLoading(true);
     try {
       await api.signUp({ name, password, email });
