@@ -165,6 +165,7 @@ const style = {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center'
+
   },
   boxInputContainer: {
     width: '100%',
@@ -174,7 +175,8 @@ const style = {
     alignItems: 'center',
     justifyContent: 'space-beteween',
     paddingLeft: '10px',
-    borderRadius: '10px'
+    borderRadius: '10px',
+    
   },
   boxIconContainer: {
     width: '30px',
