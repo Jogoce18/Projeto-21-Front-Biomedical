@@ -6,7 +6,8 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
-    alignItems: 'end'
+    alignItems: 'end',
+    top:'70px'
 };
 
 interface Props {

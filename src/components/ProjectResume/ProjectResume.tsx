@@ -5,36 +5,6 @@ import useAlert from '../../hooks/useAlert';
 import useAuth from '../../hooks/useAuth';
 import api from '../../services/api';
 
-const styles = {
-  container: {
-    width: '100%',
-    height: '230px',
-    marginTop: '60px',
-    borderRadius: '25px',
-    bgcolor: '#343434',
-    color: '#fff',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '20px',
-    padding: '25px 40px 30px 40px'
-  },
-  content: {
-    display: 'flex',
-    justifyContent: 'space-between',
-    width: '100%',
-  },
-  infos: {
-    width: '90px',
-    height: '90px',
-    bgcolor: '#BF0000',
-    borderRadius: '5px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-};
 
 export default function ProjectResume() {
 
@@ -101,3 +71,34 @@ export default function ProjectResume() {
     </Box>
   );
 }
+const styles = {
+  container: {
+    width: '100%',
+    height: '230px',
+    marginTop: '90px',
+    borderRadius: '25px',
+    bgcolor: '#343434',
+    color: '#fff',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '20px',
+    padding: '25px 40px 30px 40px',
+  },
+  content: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '100%',
+    top:'70px',
+  },
+  infos: {
+    width: '90px',
+    height: '90px',
+    bgcolor: '#00a6a6',
+    borderRadius: '5px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
+};

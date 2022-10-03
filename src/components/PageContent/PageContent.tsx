@@ -2,9 +2,10 @@ import { Box } from '@mui/material';
 
 const styles = {
     width: '55%',
-    padding: '50px 50px 50px 20px',
+    padding: '100px 50px 50px 20px',
     color: '#fff',
     height: '100vh',
+  
 };
 
 interface Props {

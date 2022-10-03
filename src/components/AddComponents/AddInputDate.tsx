@@ -12,11 +12,11 @@ const style = {
   borderRadius: '5px',
   border: 'none',
   margin: '0 0 10px 0',
-  bgcolor: '#343434',
+  bgcolor: '#00a6a6',
   color: '#fff',
 
   ':focus': {
-    outline: '2px solid #BF0000',
+    outline: '2px solid #00a6a6',
   }
 };
 

@@ -2,9 +2,15 @@ import { Box } from '@mui/material';
 import useAuth from '../../hooks/useAuth';
 
 const style = {
-  fontSize: '30px',
-  color: '#fff',
-  mb: '40px',
+  height: '60px',
+	width: '100%',
+  position: 'fixed',
+	top: '0',
+	left: '0',
+  display: 'flex',
+  backgroundColor: '#7f7f7f',
+  margin: '0 auto',
+  
 };
 
 interface Props {

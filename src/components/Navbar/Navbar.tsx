@@ -7,35 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import MiniLogo from '../MiniLogo/MiniLogo';
 
-const styles = {
-  box: {
-    width: '100%',
-    height: '100vh', 
-    maxWidth: 200, 
-    bgcolor: '#BF0000',
-    borderRadius: '0 10px 10px 0',
-    color: '#fff',
-    border: 'none',
-  },
-  list: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {
-    padding: '0 35px',
-    width: '100%',
-    height: '40px',
-  },
-  content: {
-    height: '80%', 
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-  },
-};
-
 export default function NavBar() {
 
   const navigate = useNavigate();
@@ -71,3 +42,36 @@ export default function NavBar() {
     </>
   );
 }
+
+const styles = {
+  box: {
+    width: '100%',
+    height: '100vh', 
+    maxWidth: 200, 
+    bgcolor: '#00a6a6',
+    borderRadius: '0 10px 10px 0',
+    color: '#fff',
+    border: 'none',
+    bottom: '25px',
+    
+  },
+  list: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    top: '80px',
+  },
+  button: {
+    padding: '0 35px',
+    width: '100%',
+    height: '40px',
+  },
+  content: {
+    height: '80%', 
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+    bottom: '900px',
+  },
+};

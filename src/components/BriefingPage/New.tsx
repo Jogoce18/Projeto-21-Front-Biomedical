@@ -11,7 +11,7 @@ import Button from './Button';
 const styles = {
   container: {
     mt: '60px',
-    bgcolor: '#BF0000', 
+    bgcolor: '#00a6a6', 
     width: '100%', 
     height: '80%', 
     borderRadius: '25px',

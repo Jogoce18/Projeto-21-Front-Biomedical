@@ -11,9 +11,8 @@ const style = {
   height: '100px',
   color: '#fff',
   fontSize: '25px',
-  backgroundColor: '#BF0000',
-  borderRadius: '0 10px 10px 0',
-  fontWeight: 700
+  fontWeight: 700,
+
 };
 
 export default function MiniLogo() {
@@ -32,5 +31,6 @@ export default function MiniLogo() {
 const Img = styled.img`
 
   cursor: pointer;
-  width: 70%;
+  width: 80%;
+  margin-top: 180px;
 `;

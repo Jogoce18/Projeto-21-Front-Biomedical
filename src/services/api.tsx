@@ -31,6 +31,7 @@ export interface UserData {
 export interface ProjectData {
   id: number
   title: string;
+  imageUrl: string;
   resume: string;
   importantInfos: string;
   startDate: string;
@@ -43,6 +44,7 @@ export interface ProjectData {
 export interface ProjectClientData {
   id: number
   title: string;
+  imageUrl: string;
   resume: string;
   importantInfos: string;
   startDate: string;
