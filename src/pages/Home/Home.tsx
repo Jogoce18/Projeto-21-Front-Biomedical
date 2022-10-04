@@ -27,7 +27,7 @@ export default function Home() {
   const { setMessage } = useAlert();
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState<number | false>(false);
-  const [projects, setProjects] = useState<any[] | null>(null);
+  const [manutenções, setManutenções] = useState<any[] | null>(null);
 
   useEffect(() => {
     if (!auth || !auth.token) {
@@ -36,7 +36,7 @@ export default function Home() {
 
     const promise = api.getProject(auth.token, auth.id);
     promise.then((response) => {
-      setProjects(response.data);
+      setManutenções(response.data);
     })
     .catch((error) => {
       setMessage({ type: 'error', text: error.response.data });
@@ -57,9 +57,9 @@ export default function Home() {
           Olá, {auth.name}!
         </Header>
 
-        { projects?.length === 0 ? 
+        { manutenções?.length === 0 ? 
           <Box component='h2' sx={styles.noProjects} >
-            Nenhum projeto cadastrado.
+            Sem manutenção registrada.
           </Box>
           :
           <>
@@ -81,7 +81,7 @@ export default function Home() {
             </Box>
 
             <Box sx={{ marginTop: '10px', height: '65vh', overflow: 'auto' }}>
-              {projects?.map((p) => 
+              {manutenções?.map((p) => 
                 <>
                   <Accordion key={p.project.id} sx={styles.accordion} expanded={expanded === p.project.id} onChange={handleChange(p.project.id)}>
                     <AccordionSummary

@@ -20,7 +20,7 @@ export default function Annotations() {
   const { projectId } = useParams();
   const { auth } = useAuth();
   const { setMessage } = useAlert();
-  const [ briefings, setBriefings ] = useState<BriefingData[]>();
+  const [ annotation, setAnnotation ] = useState<BriefingData[]>();
   const [lever, setLever] = useState<boolean>(false);
 
   useEffect(() => {
@@ -30,11 +30,11 @@ export default function Annotations() {
 
     api.getProjectBriefing(auth.token, projectId)
       .then((response) => {
-        setBriefings(response.data);
+        setAnnotation(response.data);
       })
       .catch((error) => {
         error.response.status === 404 ?
-          setMessage({ type: 'warning', text: 'Você não tem briefing nesse projeto.' }) : 
+          setMessage({ type: 'warning', text: 'Você não tem anotações nessa manutenção.' }) : 
           setMessage({ type: 'error', text: error.response.data });
       });
   }, [lever]);
@@ -49,14 +49,14 @@ export default function Annotations() {
           </Header>
           
           <BriefingContent>
-            { !briefings ? '' :
-              briefings.map((briefing) => 
-              <Box key={briefing.id} >
+            { !annotation ? '' :
+              annotation.map((Annotation) => 
+              <Box key={Annotation.id} >
                 <AddText>
-                  {briefing.question}
+                  {Annotation.question}
                 </AddText>
                 <TextInfo>
-                  {briefing.answer}
+                  {Annotation.answer}
                 </TextInfo>
               </Box>
               )

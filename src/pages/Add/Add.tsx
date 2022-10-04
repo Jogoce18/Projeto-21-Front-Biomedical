@@ -99,7 +99,7 @@ export default function AddProject() {
     
     try {
       await api.createNewProject(projectData, auth.token, auth.id);
-      setMessage({ type: 'success', text: 'Projeto cadastrado com sucesso!' });
+      setMessage({ type: 'success', text: 'Manutenção cadastrada com sucesso!' });
       navigate('/home');
     } catch (error: AxiosError | Error | any) {
       setMessage({ type: 'error', text: error.response.data });
