@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Box } from '@mui/material';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import logoGo from '../../assets/redlabIcon.png';
+import logoGo from '../../assets/icons8-criar-ordem-50.png';
 
 const styles = {
   container: {
@@ -18,8 +18,8 @@ const styles = {
     fontWeight: 300
   },
   iconContainer: {
-    width: '30px',
-    height: '30px',
+    width: '40px',
+    height: '40px',
     bgcolor: '#a60000',
     borderRadius: '3px',
     display: 'flex',
