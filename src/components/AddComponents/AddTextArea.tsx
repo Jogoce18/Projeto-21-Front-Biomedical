@@ -25,11 +25,11 @@ const TextArea = styled.textarea`
   border: none;
   margin: 0 0 10px 0;
   
-  background-color: #00a6a6;
+  background-color: #a60000;
   color: #fff;
 
   :focus {
-    outline: 2px solid #00a6a6;
+    outline: 2px solid #a60000;
   }
 
 `;

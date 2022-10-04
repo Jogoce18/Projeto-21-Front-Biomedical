@@ -12,7 +12,7 @@ export default function FormButton({children, onCLick}: Props) {
       flexDirection: 'row',
       fontFamily: 'Roboto',
       fontSize: '14px',
-      backgroundColor: '#7f7f7f',
+      backgroundColor: '#a60000',
       width: '100%',
       borderRadius: '10px'
     }}

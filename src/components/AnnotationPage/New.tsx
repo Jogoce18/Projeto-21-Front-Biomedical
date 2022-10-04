@@ -8,47 +8,6 @@ import { TextareaAutosize, Typography } from '@mui/material';
 import AddText from '../AddComponents/AddText';
 import Button from './Button';
 
-const styles = {
-  container: {
-    mt: '60px',
-    bgcolor: '#00a6a6', 
-    width: '100%', 
-    height: '80%', 
-    borderRadius: '25px',
-    padding: '15px',
-    overflow: 'auto',
-    color: '#fff'
-  },
-  content: {
-    display: 'flex', 
-    flexDirection: 'column'
-  },
-  textAreaQuestion: {
-    width: '100%', 
-    maxWidth: '100%', 
-    borderRadius: '5px',
-    height: '80px',
-    padding: '8px',
-  },
-  textAreaAnswer: {
-    width: '100%', 
-    maxWidth: '100%', 
-    borderRadius: '5px',
-    height: '200px',
-    padding: '8px',
-  },
-  title: {
-    pl: '15px',
-    fontWeight: 500,
-    mb: '10px',
-    mt: '10px'
-  },
-  header: {
-    display: 'flex', 
-    alignItems: 'center', 
-    justifyContent: 'space-between',
-  }
-};
 
 interface Props {
   setLever: React.Dispatch<React.SetStateAction<boolean>>
@@ -96,7 +55,7 @@ export default function New({ setLever, lever }: Props) {
         onClick={handleSubmit}  
       >
         <AddText>
-          Cadastrar briefing
+          New Annotation
         </AddText>
         <Button />
       </Box>
@@ -122,8 +81,52 @@ export default function New({ setLever, lever }: Props) {
         value={formData.answer}
         style={styles.textAreaAnswer}
         onChange={handleInputChange}
+        color= '#e5f6f6'
       />
       
     </Box>
   );
 }
+const styles = {
+  container: {
+    mt: '80px',
+    bgcolor: '#00a6a6', 
+    width: '100%', 
+    height: '80%', 
+    borderRadius: '25px',
+    padding: '15px',
+    overflow: 'auto',
+    color: '#fff',
+  
+  },
+  content: {
+    display: 'flex', 
+    flexDirection: 'column',
+    margintop: '70px',
+  },
+  textAreaQuestion: {
+    width: '100%', 
+    maxWidth: '100%', 
+    borderRadius: '5px',
+    height: '80px',
+    padding: '8px',
+  },
+  textAreaAnswer: {
+    width: '100%', 
+    maxWidth: '100%', 
+    borderRadius: '5px',
+    height: '200px',
+    padding: '8px',
+  },
+  title: {
+    pl: '15px',
+    fontWeight: 500,
+    mb: '10px',
+    mt: '10px'
+  },
+  header: {
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'space-between',
+  }
+};

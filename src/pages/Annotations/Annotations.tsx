@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import AddButton from '../../components/AddComponents/AddButton';
 import AddText from '../../components/AddComponents/AddText';
-import BriefingContent from '../../components/BriefingPage/BriefingContent';
-import New from '../../components/BriefingPage/New';
+import BriefingContent from '../../components/AnnotationPage/AnnotationContent';
+import New from '../../components/AnnotationPage/New';
 import Header from '../../components/Header/Header';
 import NavBar from '../../components/Navbar/Navbar';
 import PageContainer from '../../components/PageContainer/PageContainer';
@@ -15,7 +15,7 @@ import useAlert from '../../hooks/useAlert';
 import useAuth from '../../hooks/useAuth';
 import api, { Briefing, BriefingData } from '../../services/api';
 
-export default function Briefings() {
+export default function Annotations() {
 
   const { projectId } = useParams();
   const { auth } = useAuth();
@@ -45,7 +45,7 @@ export default function Briefings() {
         <NavBar />
         <PageContent >
           <Header>
-            Briefing 
+            Annotation
           </Header>
           
           <BriefingContent>

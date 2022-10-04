@@ -20,7 +20,7 @@ const styles = {
   iconContainer: {
     width: '30px',
     height: '30px',
-    bgcolor: '#00a6a6',
+    bgcolor: '#a60000',
     borderRadius: '3px',
     display: 'flex',
     alignItems: 'center',

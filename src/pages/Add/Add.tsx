@@ -22,43 +22,6 @@ import Tabs from '@mui/material/Tabs';
 import { FormControl, InputLabel, MenuItem, Select, SelectChangeEvent, TextareaAutosize } from '@mui/material';
 import { valueToPercent } from '@mui/base';
 
-const styles = {
-  container: {
-    overflow: 'auto',
-    height: '70vh',
-    width: '100%',
-    paddingRight: '10%',
-    pl: '5px'
-  },
-  dateContainer: {
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'space-between'
-  },
-  clientContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    height: 'auto'
-  },
-  clientSelect: {
-    bgcolor: '#343434',
-    height: '5vh',
-    borderRadius: '5px',
-    mb: '10px',
-    color: '#fff'
-  },
-  textArea: {
-    width: '100%',
-    maxWidth: '100%',
-    borderRadius: '5px',
-    border: 'none',
-    height: '80px',
-    padding: '15px',
-    backgroundColor: '#343434',
-    color: '#fff',
-  }
-};
-
 export default function AddProject() {
 
   const { auth } = useAuth();
@@ -172,7 +135,7 @@ export default function AddProject() {
       <NavBar />
       <PageContent >
         <Header>
-          Cadastrar
+          Nova manutenção
         </Header>
 
         <Box sx={{ width: '100%', mt: '-40px' }}>
@@ -183,7 +146,7 @@ export default function AddProject() {
               textColor="secondary"
               indicatorColor="primary"
             >
-              <Tab value="Projeto" label="Projeto" />
+              <Tab value="Projeto" label="Manutenção" />
               <Tab value="Cliente" label="Cliente" />
             </Tabs>
 
@@ -330,3 +293,40 @@ export default function AddProject() {
     </PageContainer>
   );
 }
+
+const styles = {
+  container: {
+    overflow: 'auto',
+    height: '70vh',
+    width: '100%',
+    paddingRight: '10%',
+    pl: '5px'
+  },
+  dateContainer: {
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'space-between'
+  },
+  clientContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    height: 'auto'
+  },
+  clientSelect: {
+    bgcolor: '#343434',
+    height: '5vh',
+    borderRadius: '5px',
+    mb: '10px',
+    color: '#fff'
+  },
+  textArea: {
+    width: '100%',
+    maxWidth: '100%',
+    borderRadius: '5px',
+    border: 'none',
+    height: '80px',
+    padding: '15px',
+    backgroundColor: '#343434',
+    color: '#fff',
+  }
+};

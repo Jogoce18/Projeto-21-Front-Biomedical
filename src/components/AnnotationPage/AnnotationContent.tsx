@@ -19,7 +19,7 @@ interface Props {
   children: React.ReactNode;
 }
 
-function BriefingContent({ children }: Props) {
+function AnnotationContent({ children }: Props) {
   return (
     <Box component="div" sx={styles}>
       {children}
@@ -27,4 +27,4 @@ function BriefingContent({ children }: Props) {
   );
 }
 
-export default BriefingContent;
+export default AnnotationContent;

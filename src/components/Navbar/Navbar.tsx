@@ -26,7 +26,7 @@ export default function NavBar() {
             <List sx={styles.list} disablePadding>
               <ListItem disablePadding>
                 <ListItemButton sx={styles.button} disableRipple onClick={() => navigate('/home')}>
-                  <ListItemText primary="Projetos" />
+                  <ListItemText primary="Manutenções" />
                 </ListItemButton>
               </ListItem>
               

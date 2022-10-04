@@ -12,8 +12,8 @@ const style = {
   border: 'none',
   margin: '0 0 10px 0',
 
-  bgcolor: '#00a6a6',
-  color: '#fff',
+  bgcolor: '#e5f6f6',
+  color: 'black',
 
   ':focus': {
     outline: '2px solid #00a6a6',

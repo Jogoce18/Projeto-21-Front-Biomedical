@@ -12,7 +12,7 @@ const style = {
   borderRadius: '5px',
   border: 'none',
   margin: '0 0 10px 0',
-  bgcolor: '#00a6a6',
+  bgcolor: '#a60000',
   color: '#fff',
 
   ':focus': {

@@ -143,8 +143,8 @@ export default function Project() {
                 {projectData.client.phone}
               </TextInfo>
               <Box component='div' sx={{display: 'flex', justifyContent: 'space-between'}}>
-                <PageButton onClick={() => navigate(`/projects/${projectId}/briefing`)}>
-                  Briefing
+                <PageButton onClick={() => navigate(`/projects/${projectId}/annotation`)}>
+                  Annotation
                 </PageButton>
                 {!projectData.isDone ? 
                 <PageButton onClick={handleFinishProject}>
@@ -175,8 +175,8 @@ const styles = {
     border: 'none',
     height: '80px',
     padding: '15px',
-    backgroundColor: '#00a6a6',
-    color: '#fff',
+    backgroundColor: '#e5f6f6',
+    color: 'black',
    
   }
 };

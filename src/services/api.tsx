@@ -127,13 +127,13 @@ async function getProjectById(token: string, projectId: string | undefined, user
 }
 
 async function getProjectBriefing(token: string, projectId: string | undefined) {
-  const promise = axios.get(`${BASE_URL}/projects/${projectId}/briefing`, createConfig(token));
+  const promise = axios.get(`${BASE_URL}/projects/${projectId}/guidance`, createConfig(token));
 
   return promise;
 }
 
 async function createProjectBriefing(token: string, projectId: string | undefined, body: Briefing) {
-  const promise = axios.post(`${BASE_URL}/projects/${projectId}/briefing`, body, createConfig(token));
+  const promise = axios.post(`${BASE_URL}/projects/${projectId}/guidance`, body, createConfig(token));
 
   return promise;
 }

@@ -65,7 +65,7 @@ export default function Home() {
           <>
             <Box>
               <Box component='h2' sx={styles.title} >
-                Seus projetos
+              Suas manutenções
               </Box>
             </Box>
             <Box component='div' sx={styles.projectsInfos} >
