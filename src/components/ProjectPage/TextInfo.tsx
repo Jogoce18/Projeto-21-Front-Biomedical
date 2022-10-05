@@ -16,7 +16,7 @@ const style = {
   color: 'black',
 
   ':focus': {
-    outline: '2px solid #00a6a6',
+    outline: '2px solid #343434',
   }
 };
 

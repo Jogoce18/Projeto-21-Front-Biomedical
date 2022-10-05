@@ -8,7 +8,7 @@ const style = {
 	top: '0',
 	left: '0',
   display: 'flex',
-  backgroundColor: '#7f7f7f',
+  backgroundColor: '#343434',
   margin: '0 auto',
   
 };
