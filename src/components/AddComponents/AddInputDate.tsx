@@ -5,20 +5,6 @@ import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 import { useState } from 'react';
 import { Box } from '@mui/material';
 
-const style = {
-  width: '100%',
-  height: '5vh',
-  padding: '0 15px',
-  borderRadius: '5px',
-  border: 'none',
-  margin: '0 0 10px 0',
-  bgcolor: '#a60000',
-  color: '#fff',
-
-  ':focus': {
-    outline: '2px solid #00a6a6',
-  }
-};
 
 export default function AddInputDate() {
   const [value, setValue] = useState<Date | null>();
@@ -44,3 +30,18 @@ export default function AddInputDate() {
     </LocalizationProvider>
   );
 }
+
+const style = {
+  width: '100%',
+  height: '5vh',
+  padding: '0 15px',
+  borderRadius: '5px',
+  border: 'none',
+  margin: '0 0 10px 0',
+  bgcolor: '#a60000',
+  color: '#fff',
+
+  ':focus': {
+    outline: '2px solid #00a6a6',
+  }
+};

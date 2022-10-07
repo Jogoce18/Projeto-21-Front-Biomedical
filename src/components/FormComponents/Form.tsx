@@ -1,5 +1,19 @@
 import { Box } from '@mui/material';
 
+
+interface Props {
+  children: React.ReactNode;
+}
+
+function Form({ children }: Props) {
+  return (
+    <Box component="form" sx={styles}>
+      {children}
+    </Box>
+  );
+}
+
+export default Form;
 const styles = {
   width: '65%',
   maxWidth: '500px',
@@ -17,17 +31,3 @@ const styles = {
   backgroundColor: '#00a6a6',
   
 };
-
-interface Props {
-  children: React.ReactNode;
-}
-
-function Form({ children }: Props) {
-  return (
-    <Box component="form" sx={styles}>
-      {children}
-    </Box>
-  );
-}
-
-export default Form;

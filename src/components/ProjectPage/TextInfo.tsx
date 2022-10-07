@@ -4,6 +4,14 @@ interface Props {
   children: React.ReactNode
 }
 
+export default function TextInfo({ children }: Props) {
+  return (
+    <Box component='div' sx={style}>
+      {children}
+    </Box>
+      
+  );
+}
 const style = {
   width: '100%',
   height: 'auto',
@@ -19,12 +27,3 @@ const style = {
     outline: '2px solid #343434',
   }
 };
-
-export default function TextInfo({ children }: Props) {
-  return (
-    <Box component='div' sx={style}>
-      {children}
-    </Box>
-      
-  );
-}

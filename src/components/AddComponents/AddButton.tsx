@@ -3,6 +3,20 @@ import { Box } from '@mui/material';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import logoGo from '../../assets/icons8-criar-ordem-50.png';
 
+export default function AddButton() {
+
+  const navigate = useNavigate();
+
+  return (
+    <Box component='div' sx={styles.container} onClick={() => navigate('/add')}>
+      <Box component='h4' sx={styles.text}>Adicionar</Box>
+      <Box component='div' sx={styles.iconContainer}>
+        <img src={logoGo} width='15px' />
+      </Box>
+    </Box>
+  );
+}
+
 const styles = {
   container: {
     display: 'flex',
@@ -27,17 +41,3 @@ const styles = {
     justifyContent: 'center'
   },
 };
-
-export default function AddButton() {
-
-  const navigate = useNavigate();
-
-  return (
-    <Box component='div' sx={styles.container} onClick={() => navigate('/add')}>
-      <Box component='h4' sx={styles.text}>Adicionar</Box>
-      <Box component='div' sx={styles.iconContainer}>
-        <img src={logoGo} width='15px' />
-      </Box>
-    </Box>
-  );
-}
