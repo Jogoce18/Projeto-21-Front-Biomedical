@@ -31,7 +31,6 @@ describe('Sign Up and Sign In flow', () => {
     
   });
 
-
 });
 
 

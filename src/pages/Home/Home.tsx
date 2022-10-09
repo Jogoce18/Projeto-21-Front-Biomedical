@@ -184,7 +184,7 @@ const styles = {
   noProjects: {
     marginTop: '40px',
     fontSize: '18px',
-    color: '#5d5d5d'
+    color: '#343434'
   }
 };
 export const PostImage = styled.img`
