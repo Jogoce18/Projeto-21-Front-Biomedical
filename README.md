@@ -46,9 +46,9 @@
 
 ## API Reference
 
-### RECOMMENDATIONS
+### Maintenance
 
-### Create a recommendation
+### Create a maintenance
 
 ```http
 POST /recommendation
