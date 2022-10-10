@@ -25,7 +25,7 @@
 
 # Description
 <p align="justify">
-<b>Biome Optimus </b> is an application for the control of preventive and corrective maintenance of medical equipment.
+<b>Biome Optimus </b> is an application for the control of preventive and corrective maintenance of medical equipment in companies that provide this service.
 
 </p>
 
