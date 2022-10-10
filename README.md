@@ -33,10 +33,13 @@
 
 ## Features
 
--   Create a recommendation music
--   Upvote and downvote each music 
--   Get a random music 
--   Get a specific top musics based in number of votes                                                                                  
+
+-   Create new maintenance
+-   Get all maintenance
+-   Create new client
+-   Create new observations 
+-   Get observations
+-   Edit maintenance                                                                               
 
 </br>
 
