@@ -1,47 +1,347 @@
-# Getting Started with Create React App
+# -sing-me-a-song-testes
+<p align="center">
+  <img  width=300px src="https://user-images.githubusercontent.com/97575616/182211440-67b78510-bcd0-498f-b0d4-f65e2717201e.png"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+</p>
+<h1 align="center">
+  Sing me a song
+</h1>
+<div align="center">
 
-## Available Scripts
+  <h3>Built With</h3>
 
-In the project directory, you can run:
+  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" height="30px"/>
+  <img src="https://img.shields.io/badge/Prisma-3982CE?style=for-the-badge&logo=Prisma&logoColor=white" height="30px"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white" height="30px"/>
+  <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" height="30px"/>  
+  <img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge&logo=express.js&logoColor=white" height="30px"/>
+  <img src="https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white" height="30px"/>
+  <img src="https://i.ibb.co/WHZ1BCR/cypress.png" height="30px"/>
 
-### `npm start`
+  <!-- Badges source: https://dev.to/envoy_/150-badges-for-github-pnk -->
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Description
+<p align="justify">
+<b>Sing me a song</b> is an application for anonymous song recommendation. The more people like a recommendation, the more likely it is to be recommended to others.
 
-### `npm test`
+</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+</br>
 
-### `npm run build`
+## Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   Create a recommendation music
+-   Upvote and downvote each music 
+-   Get a random music 
+-   Get a specific top musics based in number of votes                                                                                  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## API Reference
 
-### `npm run eject`
+### RECOMMENDATIONS
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Create a recommendation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```http
+POST /recommendation
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Request:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+####
 
-## Learn More
+| Body   | Type       | Description             |
+| :----- | :--------- | :---------------------- |
+| `name`           | `string` | **Required**. recommendation name      |
+| `youtubeLink`         | `string` | **Required**. recommendation url          |
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`youtubeLinkRegex = /^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+$/;`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-# Projeto-21-Front-Biomedical
+#
+
+
+### Get recommendations
+
+```http
+GET /recommendations
+```
+#### Response:
+
+```json
+[
+  {
+    "id": 3,
+    "name": "Numb",
+    "youtubeLink": "https://www.youtube.com/watch?v=mRXKnG2eugU",
+    "score": 0
+  },
+  {
+    "id": 2,
+    "name": "Feels Like Home (Radio Edit)",
+    "youtubeLink": "https://www.youtube.com/watch?v=5CY1vbxP4Jo",
+    "score": 0
+  },
+  {
+    "id": 1,
+    "name": "All That Really Matters",
+    "youtubeLink": "https://www.youtube.com/watch?v=3gxxW5NqICc",
+    "score": 0
+  }
+]
+```
+
+#
+
+### Get a recommendation by id
+
+```http
+GET /recommendations/:id
+```
+#### Request:
+
+| Params      | Type      | Description           |
+| :---------- | :-------- | :-------------------- |
+| `id` | `number` | **Required**.|
+
+####
+
+#### Response:
+
+```json
+{
+  "id": 1,
+  "name": "All That Really Matters",
+  "youtubeLink": "https://www.youtube.com/watch?v=3gxxW5NqICc",
+  "score": 0
+}
+```
+
+#
+
+### Post a upvote for a recommendation
+
+```http
+POST /recommendations/:id/upvote
+```
+#### Request:
+
+| Params      | Type      | Description           |
+| :---------- | :-------- | :-------------------- |
+| `id` | `number` | **Required**.|
+
+####
+
+#
+
+### Post a downvote for a recommendation
+
+```http
+POST /recommendations/:id/downvote
+```
+#### Request:
+
+| Params      | Type      | Description           |
+| :---------- | :-------- | :-------------------- |
+| `id` | `number` | **Required**.|
+
+####
+
+#
+
+### Get a top musics recommendations - based in amount params - with decreasing score
+
+```http
+GET /recommendations/top/:amount
+```
+#### Request:
+
+| Params      | Type      | Description           |
+| :---------- | :-------- | :-------------------- |
+| `amount` | `number` | **Required**.|
+
+####
+
+`example = /recommendations/top/2`
+
+#### Response:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "All That Really Matters",
+    "youtubeLink": "https://www.youtube.com/watch?v=3gxxW5NqICc",
+    "score": 1
+  },
+  {
+    "id": 2,
+    "name": "Feels Like Home (Radio Edit)",
+    "youtubeLink": "https://www.youtube.com/watch?v=5CY1vbxP4Jo",
+    "score": 0
+  }
+]
+```
+
+#
+
+### Get a random recommendation music
+
+```http
+POST /recommendations/random
+```
+
+#### Response:
+
+```json
+{
+  "id": 1,
+  "name": "All That Really Matters",
+  "youtubeLink": "https://www.youtube.com/watch?v=3gxxW5NqICc",
+  "score": 1
+}
+```
+
+#
+
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+<b>Back-end .env file</b>
+
+`DATABASE_URL = postgres://UserName:Password@Hostname:5432/DatabaseName?schema=public`
+
+`PORT = number #recommended:5000`
+
+`MODE=test`
+
+<b>Back-end .env.test file</b>
+
+`DATABASE_URL = postgres://UserName:Password@Hostname:5432/DatabaseName-tests?schema=public`
+
+`PORT = number #recommended:5000`
+
+`MODE=test`
+
+<b>Front-end .env file</b>
+
+`REACT_APP_API_BASE_URL=http://`
+
+
+</br>
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/jogoce18/-sing-me-a-song-testes.git
+```
+
+Go to the project directory
+
+```bash
+  cd sing-me-a-song-main  /
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+</br>
+
+
+## Tests Back-end
+
+### Integration and unitary tests
+
+Go to the back-end project directory
+
+```bash
+  cd sing-me-a-song-main/back-end
+```
+Install dependencies
+
+```bash
+  npm install
+```
+
+Install prisma database
+
+```bash
+  npx prisma migrate dev
+```
+
+For run only integration tests
+
+```bash
+  npm run test:tests
+```
+
+For run only unitary tests
+
+```bash
+  npm run test:unit
+```
+
+For run both tests: unitary and integration
+
+```bash
+  npm run test
+```
+
+## Tests Front-end
+
+### E2E tests with cypress
+
+Go to the back-end project directory and up the server
+
+```bash
+  cd sing-me-a-song-main/back-end
+```
+```bash
+  npm run dev
+```
+
+Go to the front-end project directory
+
+```bash
+  cd sing-me-a-song-main/front-end
+```
+Install dependencies
+
+```bash
+  npm install
+```
+
+Up the front-end application 
+
+```bash
+  npm start
+```
+
+Open cypress graphic interface
+
+```bash
+  npx cypress open
+```
+
+## Lessons Learned
+
+In this project I learned a lot about unitary, integration and E2E tests
+
+</br>
+
