@@ -37,6 +37,7 @@
 -   Create new maintenance
 -   Get all maintenance
 -   Create new client
+-   Get clients
 -   Create new observations 
 -   Get observations
 -   Edit maintenance                                                                               
