@@ -25,7 +25,7 @@
 
 # Description
 <p align="justify">
-<b>Sing me a song</b> is an application for anonymous song recommendation. The more people like a recommendation, the more likely it is to be recommended to others.
+<b>Biome Optimus </b> is an application for the control of preventive and corrective maintenance of medical equipment.
 
 </p>
 
