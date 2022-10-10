@@ -1,6 +1,6 @@
 # Biome optimus
 <p align="center">
-  <img  width=300px src="https://user-images.githubusercontent.com/97575616/182211440-67b78510-bcd0-498f-b0d4-f65e2717201e.png"
+  <img  width=300px src="https://user-images.githubusercontent.com/80592317/194906067-b2c1f216-2736-4937-a110-9ebb6a7fa9fd.png"
 
 </p>
 <h1 align="center">
